@@ -1,71 +1,76 @@
-.cabecalho{
+.cabecalho {
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: #F4F2F2;
     padding: 19px;
-    box-shadow: 0px 4px 4px 0px #929DC5 25%;
+    box-shadow: 0px 4px 4px 0px rgba(146, 157, 197, 0.25);
     overflow: hidden;
+    display: none;
 }
-
-
 
 .containerCabecalho {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 100%;
 }
 
-.logo{
+.logo {
     display: flex;
     justify-content: center;
 }
 
-.menu ul li{
+.menu ul {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
     gap: 37px;
     padding-bottom: 10px;
 }
 
+.menu ul li {
+    list-style: none;
+}
+
 .menu ul li a {
-    font-size: 12px; 
+    font-size: 12px;
 }
 
 .botaoCabecalho {
-    margin-top: 10px; 
+    margin-top: 10px;
 }
 
 .botaoCabecalho button {
-    width: 100%; 
-    font-size: 10px; 
+    width: 100%;
+    font-size: 10px;
 }
 
-.botaoCabecalho .login:hover{
+.botaoCabecalho .login:hover {
     background-color: #cecdcd;
     transition-duration: .3s;
 }
 
-.botaoCabecalho .register:hover{
+.botaoCabecalho .register:hover {
     background-color: #1E2167;
     color: white;
     transition-duration: .3s;
 }
 
-
 @media screen and (min-width: 1024px) {
+    .cabecalho{
+        display: block;
+    }
+
     .container {
         width: 90%;
         display: flex;
         justify-content: center;
-        align-content: center;
         align-items: center;
     }
-    
+
     .containerCabecalho {
-        display: flex;
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
@@ -77,6 +82,7 @@
         gap: 30px;
         padding-top: 20px;
         padding-bottom: 20px;
+        flex-direction: row; /* Flex direction row for desktop */
     }
 
     .menu ul li a {
@@ -91,7 +97,6 @@
         display: flex;
         justify-content: center;
         gap: 15px;
-
     }
 
     .botaoCabecalho button {
@@ -106,5 +111,50 @@
         height: 28px;
         color: #1E2167;
     }
+}
 
+/* Styles for mobile menu */
+.menuMobileHeader {
+    display: none; /* Hide mobile menu by default */
+}
+
+@media screen and (max-width: 1023px) {
+    .menuMobileHeader {
+        display: flex; /* Show mobile menu on smaller screens */
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        padding: 10px;
+    }
+
+    .menuMobileHeader .burgerMenu {
+        background: none;
+        border: none;
+        cursor: pointer;
+    }
+
+    #navegationMobile {
+        display: none; /* Hide the navigation menu initially */
+        position: absolute;
+        top: 60px; /* Position below the header */
+        left: 0;
+        width: 100%;
+        background-color: #F4F2F2;
+        z-index: 1000;
+    }
+
+    #navegationMobile.show {
+        display: block; /* Show the menu when toggled */
+    }
+
+    .menuMobileHeader .logoAndBurgerMenu {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .menuMobileHeader img {
+        width: 50px; /* Adjust logo size */
+    }
 }

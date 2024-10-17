@@ -1,0 +1,94 @@
+.logoAndBurgerMenu img {
+    width: 150px; /* Ajuste este valor conforme necessário */
+    height: auto; /* Mantém a proporção da imagem */
+    filter: invert(1) brightness(2);
+}
+
+.burgerMenu img,
+.xButtonMobile img {
+    width: 24px; /* Ajuste este valor para o tamanho desejado */
+    height: auto; /* Mantém a proporção da imagem */
+}
+
+#menuMobile {
+    z-index: 50;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../imagens/fundoheader.png);
+}
+
+.menuMobileHeader {
+    display: flex;
+    justify-content: center;
+    padding: 20px 0; /* Ajustei para melhorar a aparência */
+}
+
+.logoAndBurgerMenu {
+    position: fixed;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 2px 2px 10px rgba(128, 128, 128, 0.233);
+    width: 100%;
+    padding: 10px;
+}
+
+.burgerMenu,
+.xButtonMobile {
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-left: 10px; /* Espaçamento entre os botões */
+}
+
+.hide {
+    display: none;
+}
+
+.navegationMobileList {
+    height: 100vh;
+    background-image: url(../imagens/fundoheader.png);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(1px);
+    position: fixed; /* Mantenha a posição fixa */
+    top: 0; /* Fixa no topo da tela */
+    left: 0; /* Fixa à esquerda */
+    right: 0; /* Fixa à direita */
+    transition: opacity 0.5s ease; /* Transição suave para a opacidade */
+    opacity: 1; /* Começa visível */
+    z-index: 10; /* Garante que fique acima de outros elementos */
+}
+
+
+.navegationMobileList ul li {
+    padding: 10px 20px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.navegationMobileList ul li a {
+    color: white;
+    text-decoration: none; /* Remove underline */
+}
+
+.navegationMobile {
+    display: none; /* Oculta o menu por padrão */
+}
+
+.navegationMobile.show {
+    display: block; /* Exibe o menu quando a classe 'show' é adicionada */
+}
+
+
+.menuMobileHeader{
+    display: none;
+}
+
+@media screen and (max-width: 1023px){
+    header .menuMobileHeader{
+        display: block;
+    }
+}
