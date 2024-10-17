@@ -1,0 +1,212 @@
+.subscribleFormulario {
+    background-color: #DCE6EC;
+    font-family: "Noto Sans", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 79px;
+}
+
+.subscribleFormularioContainer {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    padding-top: 87px;
+    gap: 42px;
+}
+
+.subscribleFormularioText {
+    background-color: #E4ECF1;
+    width: 504px;
+    padding: 54px 35px 30px 35px;
+    border-radius: 27px;
+}
+
+.subscribleFormularioText h2 {
+    font-size: 14px;
+    font-weight: 400;
+    color: #1F3659;
+    text-transform: uppercase;
+}
+
+.subscribleFormularioText h3 {
+    font-size: 32px;
+    font-weight: 400;
+    color: #1F3659;
+    text-transform: uppercase;
+}
+
+.subscribleFormularioText h3 span {
+    font-weight: 900;
+}
+
+.accordion-container {
+    margin: 20px;
+}
+
+.accordion {
+    background-color: #D9D9D9;
+    color: #1F3659;
+    cursor: pointer;
+    padding: 15px;
+    width: 436px;
+    border: none;
+    border-radius: 5px 5px 0px 0px;
+    text-align: center;
+    outline: none;
+    font-size: 14px;
+    font-weight: 400;
+    text-transform: uppercase;
+    transition: 0.4s;
+    margin-bottom: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.accordion.active,
+.accordion:hover {
+    background-color: #9d9d9dc5;
+}
+
+.symbol {
+    font-size: 18px;
+    margin-left: auto;
+    color: #9D9D9D;
+}
+
+.panel {
+    padding: 0 15px;
+    background-color: #DDE7EC;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    margin-bottom: 10px;
+}
+
+.panel p {
+    font-family: "Noto Sans", sans-serif;
+    margin: 10px 0;
+    font-size: 16px;
+    line-height: 24px;
+    color: #797979;
+}
+
+.formulario {
+    background-color: #27556F;
+    width: 504px;
+    border-radius: 27px;
+    font-family: "Noto Sans", sans-serif;
+    padding: 52px 0px 0px 34px;
+    
+}
+
+.formulario .text h2 {
+    font-size: 14px;
+    font-weight: 400;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    padding-bottom: 5px;
+}
+
+.formulario .text h3 {
+    font-size: 32px;
+    font-weight: 400;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    padding-bottom: 5px;
+}
+
+.formulario .text h3 span {
+    font-weight: 900;
+}
+
+.itens {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 0px 8px 32px 0px;
+}
+
+.itens .num1, .itens .num2 {
+    width: 213px;
+    height: 36px;
+    background-color: #D9D9D9;
+    border-radius: 4px;
+}
+
+.itens .num3 {
+    width: 444px;
+    height: 128px;
+    background-color: #D9D9D9;
+    border-radius: 4px;
+}
+
+.botaoFormulario button {
+    background-color: #D9D9D9;
+    width: 118px;
+    height: 40px;
+    color: #110F6F;
+    font-family: "Noto Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    border: none;
+    border-radius: 4px;
+    margin-bottom: 50px;
+    cursor: pointer;
+}
+
+/* Media Query para telas menores */
+@media screen and (max-width: 600px) {
+    .subscribleFormularioText, .formulario {
+        width: 100%; /* Ocupa toda a largura disponível */
+        padding: 30px 15px; /* Ajusta o padding */
+    }
+
+    .accordion {
+        width: 100%; /* Ocupa toda a largura disponível */
+    }
+
+    .itens .num1, .itens .num2, .itens .num3 {
+        width: 100%; /* Inputs ocupam toda a largura */
+    }
+
+    .itens .num3 {
+        height: auto; /* Ajusta a altura para conteúdo */
+    }
+
+    .botaoFormulario button {
+        width: 100%; /* Botão ocupa a largura total */
+    }
+}
+
+/* Media Query para telas ainda menores (300px) */
+@media screen and (max-width: 400px) {
+    .subscribleFormularioContainer {
+        padding-top: 40px;
+        gap: 20px;
+    }
+
+    .subscribleFormularioText h3, .formulario .text h3 {
+        font-size: 24px; /* Reduz o tamanho da fonte */
+    }
+
+    .subscribleFormularioText h2, .formulario .text h2 {
+        font-size: 12px;
+    }
+
+    .accordion {
+        font-size: 12px; /* Ajusta tamanho da fonte dos títulos */
+        padding: 10px;
+    }
+
+    .panel p {
+        font-size: 14px; /* Ajusta fonte dos textos internos */
+    }
+
+    .botaoFormulario button {
+        font-size: 14px; /* Ajusta fonte do botão */
+        height: 36px;
+    }
+}

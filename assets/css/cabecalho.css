@@ -1,0 +1,110 @@
+.cabecalho{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #F4F2F2;
+    padding: 19px;
+    box-shadow: 0px 4px 4px 0px #929DC5 25%;
+    overflow: hidden;
+}
+
+
+
+.containerCabecalho {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo{
+    display: flex;
+    justify-content: center;
+}
+
+.menu ul li{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 37px;
+    padding-bottom: 10px;
+}
+
+.menu ul li a {
+    font-size: 12px; 
+}
+
+.botaoCabecalho {
+    margin-top: 10px; 
+}
+
+.botaoCabecalho button {
+    width: 100%; 
+    font-size: 10px; 
+}
+
+.botaoCabecalho .login:hover{
+    background-color: #cecdcd;
+    transition-duration: .3s;
+}
+
+.botaoCabecalho .register:hover{
+    background-color: #1E2167;
+    color: white;
+    transition-duration: .3s;
+}
+
+
+@media screen and (min-width: 1024px) {
+    .container {
+        width: 90%;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+    }
+    
+    .containerCabecalho {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 70%;
+    }
+
+    .menu ul {
+        display: flex;
+        gap: 30px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    .menu ul li a {
+        font-family: "Inter", serif;
+        color: #000000;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 16.94px;
+    }
+
+    .botaoCabecalho {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+
+    }
+
+    .botaoCabecalho button {
+        cursor: pointer;
+        border-radius: 3px;
+        border: none;
+        font-family: "Inter", serif;
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 14.52px;
+        width: 86px;
+        height: 28px;
+        color: #1E2167;
+    }
+
+}

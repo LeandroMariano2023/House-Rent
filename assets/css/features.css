@@ -1,0 +1,109 @@
+.features {
+    background-image: url(../imagens/fundofeatures.png);
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.featuresContainer {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 94px;
+    padding-left: 20px;
+    padding-right: 10px;
+    padding-top: 150px;
+}
+
+.featuresContainer .imagem{
+    width: 300px;
+}
+
+.featuresText {
+    font-family: "Noto Sans", sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.featuresText h2 {
+    font-size: 14px;
+    font-weight: 400;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    padding-bottom: 24px;
+}
+
+.featuresText h3 {
+    font-size: 32px;
+    font-weight: 400;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    padding-bottom: 32px;
+}
+
+.featuresText h3 span{
+    font-weight: 900;
+}
+
+.featuresText p{
+    font-size: 14px;
+    font-weight: 200;
+    line-height: 21px;
+    color: #F2F2F2;
+    padding-top: 27px;
+    padding-bottom: 39px;
+    width: 354px;
+    text-align: center;
+}
+
+.featuresText ul li{
+    font-size: 14px;
+    font-weight: 400;
+    color: #FFFFFF;
+    padding-bottom: 19px;
+}
+
+.featuresText ul li img{
+    padding-right: 14px;
+}
+
+.botaoFeatures button {
+    width: 155px;
+    height: 44px;
+    border-radius: 23px;
+    background-color: #D9D9D9;
+    font-family: "Noto Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 21.79px;
+    color: #110F6F;
+    border: 4px solid #FFFFFF2E;
+    margin-bottom: 126px;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    margin-top: 44px;
+    margin-left: 50px;
+}
+
+.botaoFeatures button:hover {
+    transform: scale(1.1);
+    background-color: #C0C0C0;
+}
+
+@media screen and (min-width: 1024px){
+    main .featuresText{
+        align-items: start;
+    }
+    main .featuresText p{
+        text-align: start;
+    }
+
+    .featuresContainer .imagem{
+        width: 584px;
+        margin-top: -220px;
+    }
+}

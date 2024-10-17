@@ -1,0 +1,106 @@
+.cards {
+    background-image: url(../imagens/fundocards.png);
+    background-size: cover;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding-top: 98px;
+    overflow: hidden;
+}
+
+.cardsContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 1040px;
+}
+
+.cardsText {
+    font-family: "Noto Sans", sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 99px;
+}
+
+.cardsText h2 {
+    font-size: 14px;
+    font-weight: 400;
+    color: #1A2144;
+    text-transform: uppercase;
+    padding-bottom: 25px;
+}
+
+.cardsText h3 {
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 43.58px;
+    color: #1A2144;
+    text-transform: uppercase;
+    padding-bottom: 29px;
+}
+
+.cardsText h3 span {
+    font-weight: 700;
+}
+
+.cardsText p {
+    font-size: 14px;
+    font-weight: 200;
+    line-height: 21px;
+    color: #454655;
+    padding-top: 26px;
+    padding-bottom: 53px;
+    max-width: 525.32px;
+    height: 48px;
+    text-align: center;
+}
+
+.cardsItens {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 32px;
+    padding-top: 51px;
+    padding-bottom: 93px;
+}
+
+.card {
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.1);
+    animation: shake 0.5s;
+}
+
+@keyframes shake {
+    0% {
+        transform: scale(1.1);
+    }
+
+    25% {
+        transform: scale(1.1) translateX(-5px);
+    }
+
+    50% {
+        transform: scale(1.1) translateX(5px);
+    }
+
+    75% {
+        transform: scale(1.1) translateX(-5px);
+    }
+
+    100% {
+        transform: scale(1.1);
+    }
+}
+
+.card img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
