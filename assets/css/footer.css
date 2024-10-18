@@ -1,22 +1,30 @@
 .footer {
     background-color: #27556F;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
 }
 
 .footerConteiner {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .footerSocial {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-left: 10px;
     padding-top: 86px;
-    padding-left: 119px;
     padding-bottom: 85px;
 }
 
 .footerSocial .imagem {
     filter: invert(1) brightness(2);
+    padding-bottom: 37px;
 }
 
 .footerSocial p {
@@ -27,6 +35,9 @@
     width: 397px;
     padding-top: 36px;
     padding-bottom: 38px;
+    width: 292px;
+    padding: 0px 10px;
+    text-align: center;
 }
 
 .footerSocial h4 {
@@ -34,6 +45,7 @@
     font-size: 17px;
     font-weight: 600;
     color: #ffffff;
+    padding-top: 47px;
     padding-bottom: 25px;
 }
 
@@ -42,43 +54,50 @@
 }
 
 .footerLinks {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     font-family: "Noto Sans", sans-serif;
     color: #ffffff;
+    
 }
 
 .footerLinks h3 {
-    padding-bottom: 22px;
+    padding-bottom: 30px;
 }
 
-.footerLinks ul li a{
+.footerLinks ul li a {
     color: #ffffff;
-    padding-bottom: 12px;
+    padding-bottom: 23px;
 }
 
 .footerLinks ul li {
-    
+
     padding-bottom: 12px;
 }
 
 .footerContato {
     display: flex;
     flex-direction: column;
-    align-items: start;
+    justify-content: center;
+    align-items: center;
     padding-right: 310px;
     font-family: "Noto Sans", sans-serif;
     color: #ffffff;
     position: relative;
+    padding: 50px 50px;
+    text-align: start;
+
 }
 
 .footerContato .copyright {
     position: absolute;
-    right: 0;
+    right: 20;
     bottom: 0;
     padding-right: 20px;
     font-size: 14px;
-    writing-mode: vertical-rl;
-    transform: rotate(180deg);
-    margin-right: 150px;
+
 }
 
 .footerContato h3 {
@@ -113,52 +132,25 @@
     text-align: center;
 }
 
-/* Media Query para telas a partir de 300px */
-@media (max-width: 300px) {
-    .footerConteiner {
-        flex-direction: column;
-        align-items: center; /* Centraliza os itens */
-        padding: 20px; /* Adiciona padding ao redor do container */
+
+@media screen and (min-width: 1023px) {
+    footer .footer {
+        display: flex;
     }
 
-    .footerSocial {
-        padding: 20px; /* Ajusta padding para dar espaço */
-        text-align: center; /* Centraliza o texto */
+    footer .footerConteiner {
+        flex-direction: row;
+        margin-left: 150px;
     }
 
-    .footerSocial p {
-        width: auto; /* Ajusta a largura para caber na tela */
-        padding: 10px 0; /* Ajusta o padding */
+    footer .footerContato{
+        padding-right: 350px;
     }
 
-    .footerContato {
-        padding-right: 0; /* Remove o padding à direita */
-        align-items: center; /* Centraliza os itens */
-        text-align: center; /* Centraliza o texto */
-        padding: 20px; /* Adiciona padding */
-    }
-
-    .footerContato .copyright {
-        position: relative; /* Ajuste a posição */
-        margin: 0; /* Remove a margem */
-        writing-mode: horizontal-tb; /* Muda o modo de escrita */
-        transform: none; /* Remove a rotação */
-        padding-top: 10px; /* Adiciona algum espaço no topo */
-    }
-
-    .footerIcons img {
-        padding: 5px; /* Reduz o padding das imagens */
-    }
-
-    .footerLinks {
-        text-align: center; /* Centraliza o texto dos links */
-    }
-
-    .footerLinks h3, .footerContato h3 {
-        padding-bottom: 15px; /* Reduz o padding */
-    }
-
-    .footerLinks ul li {
-        padding: 5px; /* Reduz o padding dos itens da lista */
+    footer .footerContato .copyright {
+        writing-mode: vertical-rl;
+        transform: rotate(180deg);
+        margin-right: -450px;
+        bottom: 110px;
     }
 }
